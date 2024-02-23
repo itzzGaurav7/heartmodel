@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--From https://codepen.io/frytyler/pen/EGdtg-->
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="UTF-8" />
+    <title>ML API</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="heart_disease\static\css\style.css" />
+  </head>
+
+  <body>
+    <div class="login">
+      <h1>Checking if a person has heart disease or not</h1>
+
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="/predict" method="post">
+        <input
+          type="int"
+          name="interview_score3"
+          placeholder="Age"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="experience"
+          placeholder="Sex"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="test_score"
+          placeholder="RestingBP"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="interview_score5"
+          placeholder="FastingBS"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="interview_score4"
+          placeholder="MaxHR"
+          required="required"
+        /><br />
+        <input
+          type="int"
+          name="interview_score4"
+          placeholder="Exercise Angina"
+          required="required"
+        /><br />
+        <input
+          type="bool"
+          name="interview_score5"
+          placeholder="ChestPainType_0"
+          required="required"
+        /><br />
+        <input
+          type="bool"
+          name="interview_score6"
+          placeholder="ChestPainType_1"
+          required="required"
+        /><br />
+        <input
+          type="bool"
+          name="interview_score7"
+          placeholder="ChestPainType_2"
+          required="required"
+        /><br />
+        <input
+          type="bool"
+          name="interview_score8"
+          placeholder="ChestPainType_3"
+          required="required"
+        /><br />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+
+      <br />
+      <br />
+    </div>
+    {{prediction_text}}
+  </body>
+</html>
